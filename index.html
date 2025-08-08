@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECE Portfolio | Future Scientist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            body: ['Arial', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-body">
+  <!-- Hero Section -->
+  <section class="bg-indigo-700 text-white py-20 text-center">
+    <h1 class="text-4xl font-bold">I'm Sneha, an ECE Student</h1>
+    <p class="mt-4 text-xl">Hardworking. Enthusiastic. Future Scientist 🔬🚀</p>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-16 px-4 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-semibold text-indigo-700 mb-4">About Me</h2>
+    <p>
+      I'm an Electronics and Communication Engineering student fueled by curiosity and driven by ambition. Whether it's decoding signals or diving into embedded systems, I find joy in understanding how things work — and even more in building what comes next.
+
+With a deep passion for science and innovation, I aspire to contribute to groundbreaking discoveries that shape the future. I'm not just chasing a degree; I'm chasing a vision — to become a scientist who makes a difference.
+
+
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="bg-white py-16 px-4 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-semibold text-indigo-700 mb-4">Skills</h2>
+    <ul class="list-disc pl-5">
+      <li>Embedded Systems (Arduino, Raspberry Pi)</li>
+      <li>Signal Processing</li>
+      <li>Python, C, and MATLAB</li>
+      <li>Scientific Research and Paper Writing</li>
+      <li>IoT and Basic Wireless Communication</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="py-16 px-4 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-semibold text-indigo-700 mb-4">Projects</h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="bg-white shadow-lg p-6 rounded-lg hover:shadow-xl transition">
+        <h3 class="text-lg font-bold text-indigo-600">Phycoscope 🌿</h3>
+        <p>A device to observe and analyze terrestrial algae using optics and embedded sensors.</p>
+      </div>
+      <div class="bg-white shadow-lg p-6 rounded-lg hover:shadow-xl transition">
+        <h3 class="text-lg font-bold text-indigo-600">Smart Antenna Design 📡</h3>
+        <p>Simulation-based project on adaptive beamforming for efficient signal transmission.</p>
+      </div>
+      <div class="bg-white shadow-lg p-6 rounded-lg hover:shadow-xl transition">
+        <h3 class="text-lg font-bold text-indigo-600">Light Intensity Control 💡</h3>
+        <p>Automatic streetlight system using LDR, Arduino, and PWM control.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="bg-indigo-50 py-16 px-4 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-semibold text-indigo-700 mb-4">Contact</h2>
+    <p>Email: <a href="mailto:sneha.ece@example.com" class="text-indigo-600 underline">sneha.ece@example.com</a></p>
+    <p>LinkedIn: <a href="#" class="text-indigo-600 underline">linkedin.com/in/sneha-ece</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center bg-indigo-700 text-white py-4 mt-10">
+    &copy; 2025 Sneha  |ECE portfolio 
+  </footer>
+
+  <!-- Optional Scroll Animation -->
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fadeIn');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      section.classList.add('opacity-0');
+      observer.observe(section);
+    });
+
+    const style = document.createElement("style");
+    style.innerHTML = `
+      .animate-fadeIn {
+        animation: fadeIn 1s forwards;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
